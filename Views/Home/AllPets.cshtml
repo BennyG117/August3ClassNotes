@@ -1,0 +1,19 @@
+@* reminder that Layout already has the renderbod() formatting for the page *@
+
+@{
+    ViewData["Title"] = "All Pets Page";
+}
+
+@model List<Pet> 
+
+<h1>@ViewData["Title"]</h1>
+
+@* creating a loop to loop through each pet *@
+@* @foreach(Pet anyWordHere in Model) *@
+@foreach(Pet p in Model)
+{
+    <h2>@p.Name</h2>
+    <p>@p.Species</p>
+    <p>@p.IsFriendly</p>
+    <p>@p.Age</p>
+}
